@@ -32,6 +32,21 @@ footer, header, hgroup, menu, nav, section {
 body {
 	line-height: 1;
 }
+.img{
+	height: 200px;
+	width: 200px;
+	object-fit: cover;
+	border-radius: 50%;
+	transition: transform 0.3s ease-in-out;
+	cursor: pointer;
+}
+
+.img:hover {
+	transform: scale(1.1);
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+
 
 ol, ul {
 	list-style: none;
@@ -166,7 +181,6 @@ input, select, textarea {
 		-ms-transition: color 0.2s ease, border-bottom 0.2s ease;
 		transition: color 0.2s ease, border-bottom 0.2s ease;
 		text-decoration: none;
-		border-bottom: dotted 1px;
 		color: inherit;
 	}
 
@@ -2372,11 +2386,13 @@ input, select, textarea {
 		border: 0;
 		display: inline-block;
 		position: relative;
+		object-fit: cover;
 	}
-
-		.image img {
-			border-radius: 8px;
-			display: block;
+	
+	.image img {
+		border-radius: 8px;
+		display: block;
+		object-fit: cover;
 		}
 
 		.image.left, .image.right {
@@ -3009,11 +3025,16 @@ input, select, textarea {
 			border-radius: 100%;
 			border: solid 1px;
 		}
+		.img-link{
+			text-decoration: none;
+			list-style: none;
+		}
 
 			.spotlight .image img {
 				display: block;
 				border-radius: 100%;
-				width: 16em;
+				width: 16rem;
+				height: 16rem;
 			}
 
 		@media screen and (max-width: 980px) {
